@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project Portal</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* サイトカードのスタイル */
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            color: #2c3e50;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #666;
+            flex-grow: 1; /* 説明文の長さに寄らずボタンの位置を揃える */
+        }
+
+        /* ボタンのスタイル */
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #888;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Creative Works</h1>
+    <p>これまでに制作したプロジェクトのまとめ</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>シーザー暗号</h2>
+        <p>単語を入力すると、その単語をシーザー暗号式でずらしたときの文字列を全て表示します。</p>
+        <a href="https://outer128.github.io/caesar/" class="btn" target="_blank">サイトを見る</a>
+    </div>
+
+    <div class="card">
+        <h2>ひらがな変換</h2>
+        <p>ひらがなの変換を入力すると、変換前と後がどちらも単語として成立しているものを全て列挙します。</p>
+        <a href="https://outer128.github.io/replace/" class="btn" target="_blank">サイトを見る</a>
+    </div>
+
+    <div class="card">
+        <h2>50音表除外検索</h2>
+        <p>ひらがなを選択すると、その文字を含まない単語のみを抽出します。パングラムの制作にお役立てください。</p>
+        <a href="https://outer128.github.io/PANGRAM/" class="btn" target="_blank">サイトを見る</a>
+    </div>
+
+    <div class="card">
+        <h2>50音表近所検索</h2>
+        <p>単語を入力すると、50音表で隣り合った単語を抽出します。</p>
+        <a href="https://outer128.github.io/tango/" class="btn" target="_blank">サイトを見る</a>
+    </div>
+
+  
+</div>
+
+</body>
+</html>
